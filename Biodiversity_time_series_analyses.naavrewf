@@ -156,123 +156,6 @@
           "height": 61
         }
       },
-      "440227a3-f531-48f7-8bd3-707e0ec9810f": {
-        "id": "440227a3-f531-48f7-8bd3-707e0ec9810f",
-        "position": {
-          "x": 1119.6842586920136,
-          "y": 87.34472049689441
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "cleaned_data_filename": {
-            "id": "cleaned_data_filename",
-            "type": "left",
-            "properties": {
-              "color": "#93211f",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 17
-            }
-          },
-          "cleaned_metadata_filename": {
-            "id": "cleaned_metadata_filename",
-            "type": "left",
-            "properties": {
-              "color": "#551f93",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 43
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/4bad8009-18fe-4c2f-98b1-181aca85fdde/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "biotisan-euromarec",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.36",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.36"
-            },
-            "dependencies": [
-              {
-                "name": "SecretsProvider",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "aws.s3",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "readxl",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "dplyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "ggplot2",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "nlme",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "vegan",
-                "module": "",
-                "asname": ""
-              }
-            ],
-            "inputs": [
-              {
-                "name": "cleaned_data_filename",
-                "type": "str"
-              },
-              {
-                "name": "cleaned_metadata_filename",
-                "type": "str"
-              }
-            ],
-            "outputs": [],
-            "confs": [
-              {
-                "name": "conf_temporary_data_directory",
-                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
-              }
-            ],
-            "params": [],
-            "secrets": [],
-            "title": "trend-analyzer-koen-greuell-lifewatch-eu",
-            "description": "trend-analyzer-koen-greuell-lifewatch-eu",
-            "created": "2025-11-05T14:21:45.802374Z",
-            "modified": "2025-11-05T14:21:46.086100Z",
-            "version": 1,
-            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/trend-analyzer-koen-greuell-lifewatch-eu:999e238",
-            "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/66af5506157094057b8dd5591bba29901b519165/trend-analyzer-koen-greuell-lifewatch-eu",
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
       "9b176509-f0c2-4743-9029-3e8662a10f57": {
         "id": "9b176509-f0c2-4743-9029-3e8662a10f57",
         "position": {
@@ -444,6 +327,268 @@
           "width": 252,
           "height": 61
         }
+      },
+      "8f7464d9-6660-4a66-b491-50b6ce77a32c": {
+        "id": "8f7464d9-6660-4a66-b491-50b6ce77a32c",
+        "position": {
+          "x": 1417.8209046547458,
+          "y": 115.29503105590064
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "results_filename": {
+            "id": "results_filename",
+            "type": "left",
+            "properties": {
+              "color": "#9279d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/68160930-9a60-43ca-9a97-7158ac28f578/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "biotisan-euromarec",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.36",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.36"
+            },
+            "dependencies": [
+              {
+                "name": "SecretsProvider",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "aws.s3",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "readxl",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "dplyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "nlme",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "vegan",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [
+              {
+                "name": "results_filename",
+                "type": "str"
+              }
+            ],
+            "outputs": [],
+            "confs": [
+              {
+                "name": "conf_minio_endpoint",
+                "assignation": "conf_minio_endpoint<-\"scruffy.lab.uvalight.net:9000\""
+              },
+              {
+                "name": "conf_minio_region",
+                "assignation": "conf_minio_region<-\"nl-uvalight\""
+              },
+              {
+                "name": "conf_temporary_data_directory",
+                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
+              },
+              {
+                "name": "conf_minio_user_bucket",
+                "assignation": "conf_minio_user_bucket<-\"naa-vre-user-data\""
+              }
+            ],
+            "params": [
+              {
+                "name": "param_minio_user_prefix",
+                "type": "str",
+                "default_value": "koen.greuell@lifewatch.eu"
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "output-storer-koen-greuell-lifewatch-eu",
+            "description": "output-storer-koen-greuell-lifewatch-eu",
+            "created": "2025-11-05T14:57:43.776727Z",
+            "modified": "2025-11-05T14:57:44.172959Z",
+            "version": 1,
+            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/output-storer-koen-greuell-lifewatch-eu:3212978",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/765b223ed53253c2fa6ed31a0071b515cb6ac003/output-storer-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "c5614b9f-3fcc-4972-9dd5-e0e385447e2d": {
+        "id": "c5614b9f-3fcc-4972-9dd5-e0e385447e2d",
+        "position": {
+          "x": 1096.3923332261738,
+          "y": 102.8726708074534
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "cleaned_data_filename": {
+            "id": "cleaned_data_filename",
+            "type": "left",
+            "properties": {
+              "color": "#93211f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 17
+            }
+          },
+          "cleaned_metadata_filename": {
+            "id": "cleaned_metadata_filename",
+            "type": "left",
+            "properties": {
+              "color": "#551f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 43
+            }
+          },
+          "results_filename": {
+            "id": "results_filename",
+            "type": "right",
+            "properties": {
+              "color": "#9279d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/9aec53bd-52fb-498c-afbc-05b0ab93c7ab/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "biotisan-euromarec",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.36",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.36"
+            },
+            "dependencies": [
+              {
+                "name": "SecretsProvider",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "aws.s3",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "readxl",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "dplyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "nlme",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "vegan",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [
+              {
+                "name": "cleaned_data_filename",
+                "type": "str"
+              },
+              {
+                "name": "cleaned_metadata_filename",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "results_filename",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_temporary_data_directory",
+                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
+              }
+            ],
+            "params": [],
+            "secrets": [],
+            "title": "trend-analyzer-koen-greuell-lifewatch-eu",
+            "description": "trend-analyzer-koen-greuell-lifewatch-eu",
+            "created": "2025-11-05T14:58:05.315899Z",
+            "modified": "2025-11-05T14:58:05.640572Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/trend-analyzer-koen-greuell-lifewatch-eu:b7c0579",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/b0ad3b4187494aec0abeb50a47c06cf3402c8e86/trend-analyzer-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
       }
     },
     "links": {
@@ -469,26 +614,37 @@
           "portId": "metadata_as_csv_filename"
         }
       },
-      "164be9f8-6852-4d49-a445-51cc594805b2": {
-        "id": "164be9f8-6852-4d49-a445-51cc594805b2",
+      "e49a3d77-fc7e-4798-a04b-a7399a93425e": {
+        "id": "e49a3d77-fc7e-4798-a04b-a7399a93425e",
         "from": {
           "nodeId": "9cc96577-33d8-4f2f-bc56-0d53781799df",
           "portId": "cleaned_data_filename"
         },
         "to": {
-          "nodeId": "440227a3-f531-48f7-8bd3-707e0ec9810f",
+          "nodeId": "c5614b9f-3fcc-4972-9dd5-e0e385447e2d",
           "portId": "cleaned_data_filename"
         }
       },
-      "6e78dc5b-66a4-4a68-8d0b-5123824856c7": {
-        "id": "6e78dc5b-66a4-4a68-8d0b-5123824856c7",
+      "0bbe1389-5cd5-4223-b152-dea2b5b62006": {
+        "id": "0bbe1389-5cd5-4223-b152-dea2b5b62006",
         "from": {
           "nodeId": "9cc96577-33d8-4f2f-bc56-0d53781799df",
           "portId": "cleaned_metadata_filename"
         },
         "to": {
-          "nodeId": "440227a3-f531-48f7-8bd3-707e0ec9810f",
+          "nodeId": "c5614b9f-3fcc-4972-9dd5-e0e385447e2d",
           "portId": "cleaned_metadata_filename"
+        }
+      },
+      "354a9a1f-1056-43ef-8878-56fc023d668e": {
+        "id": "354a9a1f-1056-43ef-8878-56fc023d668e",
+        "from": {
+          "nodeId": "c5614b9f-3fcc-4972-9dd5-e0e385447e2d",
+          "portId": "results_filename"
+        },
+        "to": {
+          "nodeId": "8f7464d9-6660-4a66-b491-50b6ce77a32c",
+          "portId": "results_filename"
         }
       }
     },
