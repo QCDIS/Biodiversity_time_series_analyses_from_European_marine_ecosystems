@@ -1,325 +1,48 @@
 {
   "chart": {
     "offset": {
-      "x": 137.59,
-      "y": 88.83
+      "x": 110.69,
+      "y": 24.75
     },
-    "scale": 0.826,
+    "scale": 0.644,
     "nodes": {
-      "2bb7df61-57f2-4f38-b5f2-17f5a0c354bd": {
-        "id": "2bb7df61-57f2-4f38-b5f2-17f5a0c354bd",
+      "3d8bfb9e-035b-4b99-9166-9ffb76f31613": {
+        "id": "3d8bfb9e-035b-4b99-9166-9ffb76f31613",
         "position": {
-          "x": 1073.2000122070312,
-          "y": 249
+          "x": 478.7422360248447,
+          "y": 115.29503105590061
         },
         "orientation": 0,
         "type": "workflow-cell",
         "ports": {
           "data_from_excel_filename": {
             "id": "data_from_excel_filename",
-            "type": "left",
+            "type": "right",
             "properties": {
               "color": "#6ce0c5",
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": -2,
-              "y": 13
+              "x": 252,
+              "y": 17
             }
           },
           "metadata_from_excel_filename": {
             "id": "metadata_from_excel_filename",
-            "type": "left",
+            "type": "right",
             "properties": {
               "color": "#88d22d",
               "parentNodeType": "workflow-cell"
             },
             "position": {
-              "x": -2,
-              "y": 39
-            }
-          },
-          "temporary_data_directory": {
-            "id": "temporary_data_directory",
-            "type": "left",
-            "properties": {
-              "color": "#ac9053",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 65
-            }
-          },
-          "cleaned_data_filename": {
-            "id": "cleaned_data_filename",
-            "type": "right",
-            "properties": {
-              "color": "#93211f",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
               "x": 252,
-              "y": 26
-            }
-          },
-          "cleaned_metadata_filename": {
-            "id": "cleaned_metadata_filename",
-            "type": "right",
-            "properties": {
-              "color": "#551f93",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 52
+              "y": 43
             }
           }
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/a3b98fb9-16ee-46df-916f-fad418ab99b7/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "wiresits",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-wiresits-cell-build:v0.0.33",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-wiresits-cell-runtime:v0.0.33"
-            },
-            "dependencies": [
-              {
-                "name": "SecretsProvider",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "aws.s3",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "readxl",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "dplyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "ggplot2",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "nlme",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "vegan",
-                "module": "",
-                "asname": ""
-              }
-            ],
-            "inputs": [
-              {
-                "name": "data_from_excel_filename",
-                "type": "str"
-              },
-              {
-                "name": "metadata_from_excel_filename",
-                "type": "str"
-              },
-              {
-                "name": "temporary_data_directory",
-                "type": "str"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "cleaned_data_filename",
-                "type": "str"
-              },
-              {
-                "name": "cleaned_metadata_filename",
-                "type": "str"
-              }
-            ],
-            "confs": [],
-            "params": [],
-            "secrets": [],
-            "title": "data-cleaner-koen-greuell-lifewatch-eu",
-            "description": "data-cleaner-koen-greuell-lifewatch-eu",
-            "created": "2025-11-04T16:25:49.472565Z",
-            "modified": "2025-11-04T16:25:49.816384Z",
-            "version": 3,
-            "container_image": "ghcr.io/naavre/cells-vl-wiresits/data-cleaner-koen-greuell-lifewatch-eu:b8dae67",
-            "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-wiresits/tree/7e06857cf7a16a2030d44bde90761d11ea043a40/data-cleaner-koen-greuell-lifewatch-eu",
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 79
-        }
-      },
-      "a09ecdff-293b-4997-aaee-ed7373925cb2": {
-        "id": "a09ecdff-293b-4997-aaee-ed7373925cb2",
-        "position": {
-          "x": 1462.2000122070312,
-          "y": 517
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "cleaned_data_filename": {
-            "id": "cleaned_data_filename",
-            "type": "left",
-            "properties": {
-              "color": "#93211f",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 13
-            }
-          },
-          "cleaned_metadata_filename": {
-            "id": "cleaned_metadata_filename",
-            "type": "left",
-            "properties": {
-              "color": "#551f93",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 39
-            }
-          },
-          "temporary_data_directory": {
-            "id": "temporary_data_directory",
-            "type": "left",
-            "properties": {
-              "color": "#ac9053",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 65
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/1b11055b-1fd0-4ffc-b90b-955907f368b8/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "wiresits",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-wiresits-cell-build:v0.0.33",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-wiresits-cell-runtime:v0.0.33"
-            },
-            "dependencies": [
-              {
-                "name": "SecretsProvider",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "aws.s3",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "readxl",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "dplyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "ggplot2",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "nlme",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "vegan",
-                "module": "",
-                "asname": ""
-              }
-            ],
-            "inputs": [
-              {
-                "name": "cleaned_data_filename",
-                "type": "str"
-              },
-              {
-                "name": "cleaned_metadata_filename",
-                "type": "str"
-              },
-              {
-                "name": "temporary_data_directory",
-                "type": "str"
-              }
-            ],
-            "outputs": [],
-            "confs": [],
-            "params": [],
-            "secrets": [],
-            "title": "trend-analyzer-koen-greuell-lifewatch-eu",
-            "description": "trend-analyzer-koen-greuell-lifewatch-eu",
-            "created": "2025-11-04T16:26:39.708154Z",
-            "modified": "2025-11-04T16:26:40.016808Z",
-            "version": 3,
-            "container_image": "ghcr.io/naavre/cells-vl-wiresits/trend-analyzer-koen-greuell-lifewatch-eu:5f18351",
-            "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-wiresits/tree/14fbe15c1cc4c47f67219903010f5f3cb16f0cce/trend-analyzer-koen-greuell-lifewatch-eu",
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 79
-        }
-      },
-      "ab94cc89-d588-46bf-8556-6658d6d6bb5f": {
-        "id": "ab94cc89-d588-46bf-8556-6658d6d6bb5f",
-        "position": {
-          "x": 383.06295399515733,
-          "y": 513.5230024213073
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "temporary_data_directory": {
-            "id": "temporary_data_directory",
-            "type": "right",
-            "properties": {
-              "color": "#ac9053",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 30
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/fa7b7b72-47fb-4a5a-8309-130a77a0097d/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/282d5b5a-9b51-49ab-bde2-39a7ce89dc0c/",
             "owner": "koen.greuell@lifewatch.eu",
             "virtual_lab": "wiresits",
             "shared_with_scopes": [],
@@ -368,21 +91,70 @@
             "inputs": [],
             "outputs": [
               {
-                "name": "temporary_data_directory",
+                "name": "data_from_excel_filename",
+                "type": "str"
+              },
+              {
+                "name": "metadata_from_excel_filename",
                 "type": "str"
               }
             ],
             "confs": [],
-            "params": [],
-            "secrets": [],
-            "title": "set-global-variables-koen-greuell-lifewatch-eu",
-            "description": "set-global-variables-koen-greuell-lifewatch-eu",
-            "created": "2025-11-05T08:50:20.581428Z",
-            "modified": "2025-11-05T08:50:22.720403Z",
-            "version": 2,
-            "container_image": "ghcr.io/naavre/cells-vl-wiresits/set-global-variables-koen-greuell-lifewatch-eu:aed561e",
+            "params": [
+              {
+                "name": "param_data_filename",
+                "type": "str",
+                "default_value": "Template_MBO_Example_raw.xlsx"
+              },
+              {
+                "name": "param_data_sheet",
+                "type": "str",
+                "default_value": "BIRDS"
+              },
+              {
+                "name": "param_metadata_sheet",
+                "type": "str",
+                "default_value": "METADATA"
+              },
+              {
+                "name": "param_minio_endpoint",
+                "type": "str",
+                "default_value": "scruffy.lab.uvalight.net:9000"
+              },
+              {
+                "name": "param_minio_region",
+                "type": "str",
+                "default_value": "nl-uvalight"
+              },
+              {
+                "name": "param_minio_user_prefix",
+                "type": "str",
+                "default_value": "koen.greuell@lifewatch.eu"
+              },
+              {
+                "name": "param_temporary_data_directory",
+                "type": "str",
+                "default_value": "/tmp/data"
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "excel-data-loader-koen-greuell-lifewatch-eu",
+            "description": "excel-data-loader-koen-greuell-lifewatch-eu",
+            "created": "2025-11-05T08:57:02.470428Z",
+            "modified": "2025-11-05T08:57:02.880669Z",
+            "version": 6,
+            "container_image": "ghcr.io/naavre/cells-vl-wiresits/excel-data-loader-koen-greuell-lifewatch-eu:c15aa62",
             "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-wiresits/tree/4a298b2447a2da42d7152776c4226bb55b330e73/set-global-variables-koen-greuell-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-wiresits/tree/8b8b600b76b93775107f9eaf4b7bd02995929286/excel-data-loader-koen-greuell-lifewatch-eu",
             "next_version": null
           }
         },
@@ -391,32 +163,44 @@
           "height": 61
         }
       },
-      "d8650091-a1bf-4966-b94d-4c048df1b38d": {
-        "id": "d8650091-a1bf-4966-b94d-4c048df1b38d",
+      "a4348363-fe0a-4c7d-9778-b083d9e22a58": {
+        "id": "a4348363-fe0a-4c7d-9778-b083d9e22a58",
         "position": {
-          "x": 699.0435835351088,
-          "y": 120.06053268765146
+          "x": 809.4875776397513,
+          "y": 126.16459627329189
         },
         "orientation": 0,
         "type": "workflow-cell",
         "ports": {
-          "temporary_data_directory": {
-            "id": "temporary_data_directory",
+          "data_from_excel_filename": {
+            "id": "data_from_excel_filename",
             "type": "left",
             "properties": {
-              "color": "#ac9053",
+              "color": "#6ce0c5",
               "parentNodeType": "workflow-cell"
             },
             "position": {
               "x": -2,
-              "y": 30
+              "y": 17
             }
           },
-          "data_from_excel_filename": {
-            "id": "data_from_excel_filename",
+          "metadata_from_excel_filename": {
+            "id": "metadata_from_excel_filename",
+            "type": "left",
+            "properties": {
+              "color": "#88d22d",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 43
+            }
+          },
+          "cleaned_data_filename": {
+            "id": "cleaned_data_filename",
             "type": "right",
             "properties": {
-              "color": "#6ce0c5",
+              "color": "#93211f",
               "parentNodeType": "workflow-cell"
             },
             "position": {
@@ -424,11 +208,11 @@
               "y": 17
             }
           },
-          "metadata_from_excel_filename": {
-            "id": "metadata_from_excel_filename",
+          "cleaned_metadata_filename": {
+            "id": "cleaned_metadata_filename",
             "type": "right",
             "properties": {
-              "color": "#88d22d",
+              "color": "#551f93",
               "parentNodeType": "workflow-cell"
             },
             "position": {
@@ -439,7 +223,7 @@
         },
         "properties": {
           "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/bb2f068b-7bbc-4edb-bd02-a18aede4c69a/",
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/41b3c586-a3a4-4944-a94c-dcdb8ca57e39/",
             "owner": "koen.greuell@lifewatch.eu",
             "virtual_lab": "wiresits",
             "shared_with_scopes": [],
@@ -487,12 +271,6 @@
             ],
             "inputs": [
               {
-                "name": "temporary_data_directory",
-                "type": "str"
-              }
-            ],
-            "outputs": [
-              {
                 "name": "data_from_excel_filename",
                 "type": "str"
               },
@@ -501,57 +279,151 @@
                 "type": "str"
               }
             ],
+            "outputs": [
+              {
+                "name": "cleaned_data_filename",
+                "type": "str"
+              },
+              {
+                "name": "cleaned_metadata_filename",
+                "type": "str"
+              }
+            ],
             "confs": [],
             "params": [
               {
-                "name": "param_data_filename",
+                "name": "param_temporary_data_directory",
                 "type": "str",
-                "default_value": "Template_MBO_Example_raw.xlsx"
-              },
-              {
-                "name": "param_data_sheet",
-                "type": "str",
-                "default_value": "BIRDS"
-              },
-              {
-                "name": "param_metadata_sheet",
-                "type": "str",
-                "default_value": "METADATA"
-              },
-              {
-                "name": "param_minio_endpoint",
-                "type": "str",
-                "default_value": "scruffy.lab.uvalight.net:9000"
-              },
-              {
-                "name": "param_minio_region",
-                "type": "str",
-                "default_value": "nl-uvalight"
-              },
-              {
-                "name": "param_minio_user_prefix",
-                "type": "str",
-                "default_value": "koen.greuell@lifewatch.eu"
+                "default_value": "/tmp/data"
               }
             ],
-            "secrets": [
-              {
-                "name": "secret_minio_access_key",
-                "type": "str"
-              },
-              {
-                "name": "secret_minio_secret_key",
-                "type": "str"
-              }
-            ],
-            "title": "excel-data-loader-koen-greuell-lifewatch-eu",
-            "description": "excel-data-loader-koen-greuell-lifewatch-eu",
-            "created": "2025-11-05T08:49:08.345162Z",
-            "modified": "2025-11-05T08:49:08.834508Z",
-            "version": 5,
-            "container_image": "ghcr.io/naavre/cells-vl-wiresits/excel-data-loader-koen-greuell-lifewatch-eu:d9f2340",
+            "secrets": [],
+            "title": "data-cleaner-koen-greuell-lifewatch-eu",
+            "description": "data-cleaner-koen-greuell-lifewatch-eu",
+            "created": "2025-11-05T08:56:53.046607Z",
+            "modified": "2025-11-05T08:56:53.418509Z",
+            "version": 4,
+            "container_image": "ghcr.io/naavre/cells-vl-wiresits/data-cleaner-koen-greuell-lifewatch-eu:db2266d",
             "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-wiresits/tree/0a0710cd5ca189aad0566131b1f76819e814b57d/excel-data-loader-koen-greuell-lifewatch-eu",
+            "source_url": "https://github.com/NaaVRE/cells-vl-wiresits/tree/ede749d4c9a2e7978e649a38176c2534c4bd5e47/data-cleaner-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "cafe80a3-1864-4162-9ea5-e3b7d7be7679": {
+        "id": "cafe80a3-1864-4162-9ea5-e3b7d7be7679",
+        "position": {
+          "x": 1130.9161490683225,
+          "y": 130.82298136645966
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "cleaned_data_filename": {
+            "id": "cleaned_data_filename",
+            "type": "left",
+            "properties": {
+              "color": "#93211f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 17
+            }
+          },
+          "cleaned_metadata_filename": {
+            "id": "cleaned_metadata_filename",
+            "type": "left",
+            "properties": {
+              "color": "#551f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 43
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/2f5b0b0b-540e-4378-ae41-ae17ca990e73/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "wiresits",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.35",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.35"
+            },
+            "dependencies": [
+              {
+                "name": "SecretsProvider",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "aws.s3",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "readxl",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "dplyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "nlme",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "vegan",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [
+              {
+                "name": "cleaned_data_filename",
+                "type": "str"
+              },
+              {
+                "name": "cleaned_metadata_filename",
+                "type": "str"
+              }
+            ],
+            "outputs": [],
+            "confs": [],
+            "params": [
+              {
+                "name": "param_temporary_data_directory",
+                "type": "str",
+                "default_value": "/tmp/data"
+              }
+            ],
+            "secrets": [],
+            "title": "trend-analyzer-koen-greuell-lifewatch-eu",
+            "description": "trend-analyzer-koen-greuell-lifewatch-eu",
+            "created": "2025-11-05T08:57:30.295694Z",
+            "modified": "2025-11-05T08:57:30.621623Z",
+            "version": 4,
+            "container_image": "ghcr.io/naavre/cells-vl-wiresits/trend-analyzer-koen-greuell-lifewatch-eu:ca69f2a",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-wiresits/tree/a7ddf3c4801223644171718ffc897f92f5ac088f/trend-analyzer-koen-greuell-lifewatch-eu",
             "next_version": null
           }
         },
@@ -562,85 +434,55 @@
       }
     },
     "links": {
-      "8d227084-d626-4b65-8a38-d88030c3df9d": {
-        "id": "8d227084-d626-4b65-8a38-d88030c3df9d",
+      "f4712747-2fbf-43d1-be97-b1da86250ee4": {
+        "id": "f4712747-2fbf-43d1-be97-b1da86250ee4",
         "from": {
-          "nodeId": "2bb7df61-57f2-4f38-b5f2-17f5a0c354bd",
-          "portId": "cleaned_data_filename"
-        },
-        "to": {
-          "nodeId": "a09ecdff-293b-4997-aaee-ed7373925cb2",
-          "portId": "cleaned_data_filename"
-        }
-      },
-      "4525c350-f7f8-4e10-a969-8882ce8b1f54": {
-        "id": "4525c350-f7f8-4e10-a969-8882ce8b1f54",
-        "from": {
-          "nodeId": "2bb7df61-57f2-4f38-b5f2-17f5a0c354bd",
-          "portId": "cleaned_metadata_filename"
-        },
-        "to": {
-          "nodeId": "a09ecdff-293b-4997-aaee-ed7373925cb2",
-          "portId": "cleaned_metadata_filename"
-        }
-      },
-      "a313717a-0d34-4ff2-a702-e3b1b4454da5": {
-        "id": "a313717a-0d34-4ff2-a702-e3b1b4454da5",
-        "from": {
-          "nodeId": "d8650091-a1bf-4966-b94d-4c048df1b38d",
+          "nodeId": "3d8bfb9e-035b-4b99-9166-9ffb76f31613",
           "portId": "data_from_excel_filename"
         },
         "to": {
-          "nodeId": "2bb7df61-57f2-4f38-b5f2-17f5a0c354bd",
+          "nodeId": "a4348363-fe0a-4c7d-9778-b083d9e22a58",
           "portId": "data_from_excel_filename"
         }
       },
-      "00b5950c-bfb7-4693-adf8-7e944588e287": {
-        "id": "00b5950c-bfb7-4693-adf8-7e944588e287",
+      "ef725000-bf8c-4c85-b806-4aff55960418": {
+        "id": "ef725000-bf8c-4c85-b806-4aff55960418",
         "from": {
-          "nodeId": "d8650091-a1bf-4966-b94d-4c048df1b38d",
+          "nodeId": "3d8bfb9e-035b-4b99-9166-9ffb76f31613",
           "portId": "metadata_from_excel_filename"
         },
         "to": {
-          "nodeId": "2bb7df61-57f2-4f38-b5f2-17f5a0c354bd",
+          "nodeId": "a4348363-fe0a-4c7d-9778-b083d9e22a58",
           "portId": "metadata_from_excel_filename"
         }
       },
-      "b33b30ea-7d83-432a-befe-4c99749ec781": {
-        "id": "b33b30ea-7d83-432a-befe-4c99749ec781",
+      "7d909fb1-7fb4-4954-9cf0-68630a508d21": {
+        "id": "7d909fb1-7fb4-4954-9cf0-68630a508d21",
         "from": {
-          "nodeId": "ab94cc89-d588-46bf-8556-6658d6d6bb5f",
-          "portId": "temporary_data_directory"
+          "nodeId": "a4348363-fe0a-4c7d-9778-b083d9e22a58",
+          "portId": "cleaned_data_filename"
         },
         "to": {
-          "nodeId": "2bb7df61-57f2-4f38-b5f2-17f5a0c354bd",
-          "portId": "temporary_data_directory"
+          "nodeId": "cafe80a3-1864-4162-9ea5-e3b7d7be7679",
+          "portId": "cleaned_data_filename"
         }
       },
-      "16bdf697-e349-48bb-8565-5451a4403571": {
-        "id": "16bdf697-e349-48bb-8565-5451a4403571",
+      "4cfdf603-6d7b-4c2c-a36c-0a3843157a16": {
+        "id": "4cfdf603-6d7b-4c2c-a36c-0a3843157a16",
         "from": {
-          "nodeId": "ab94cc89-d588-46bf-8556-6658d6d6bb5f",
-          "portId": "temporary_data_directory"
+          "nodeId": "a4348363-fe0a-4c7d-9778-b083d9e22a58",
+          "portId": "cleaned_metadata_filename"
         },
         "to": {
-          "nodeId": "a09ecdff-293b-4997-aaee-ed7373925cb2",
-          "portId": "temporary_data_directory"
-        }
-      },
-      "12bd18d8-58aa-4451-849d-711353b2cc62": {
-        "id": "12bd18d8-58aa-4451-849d-711353b2cc62",
-        "from": {
-          "nodeId": "ab94cc89-d588-46bf-8556-6658d6d6bb5f",
-          "portId": "temporary_data_directory"
-        },
-        "to": {
-          "nodeId": "d8650091-a1bf-4966-b94d-4c048df1b38d",
-          "portId": "temporary_data_directory"
+          "nodeId": "cafe80a3-1864-4162-9ea5-e3b7d7be7679",
+          "portId": "cleaned_metadata_filename"
         }
       }
     },
     "selected": {},
-    "hovered": {}
+    "hovered": {
+      "type": "node",
+      "id": "a4348363-fe0a-4c7d-9778-b083d9e22a58"
+    }
   }
 }
