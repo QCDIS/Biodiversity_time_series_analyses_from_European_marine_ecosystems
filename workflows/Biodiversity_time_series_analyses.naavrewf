@@ -1,10 +1,10 @@
 {
   "chart": {
     "offset": {
-      "x": 110.69,
-      "y": 24.75
+      "x": 133.78,
+      "y": 59.27
     },
-    "scale": 0.644,
+    "scale": 0.532,
     "nodes": {
       "9cc96577-33d8-4f2f-bc56-0d53781799df": {
         "id": "9cc96577-33d8-4f2f-bc56-0d53781799df",
@@ -148,178 +148,6 @@
             "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/data-cleaner-koen-greuell-lifewatch-eu:1fc7f01",
             "kernel": "IRkernel",
             "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/dc9d4cc42c11fb5717c2905a3e352191036ef2ac/data-cleaner-koen-greuell-lifewatch-eu",
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
-      "9b176509-f0c2-4743-9029-3e8662a10f57": {
-        "id": "9b176509-f0c2-4743-9029-3e8662a10f57",
-        "position": {
-          "x": 413.16251956157845,
-          "y": 88.89751552795025
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "data_as_csv_filename": {
-            "id": "data_as_csv_filename",
-            "type": "right",
-            "properties": {
-              "color": "#2d866b",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 17
-            }
-          },
-          "metadata_as_csv_filename": {
-            "id": "metadata_as_csv_filename",
-            "type": "right",
-            "properties": {
-              "color": "#79afd2",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 43
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/80edabd7-5a69-4650-8a82-05184122e800/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "biotisan-euromarec",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.36",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.36"
-            },
-            "dependencies": [
-              {
-                "name": "SecretsProvider",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "aws.s3",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "readxl",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "dplyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "ggplot2",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "nlme",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "vegan",
-                "module": "",
-                "asname": ""
-              }
-            ],
-            "inputs": [],
-            "outputs": [
-              {
-                "name": "data_as_csv_filename",
-                "type": "str"
-              },
-              {
-                "name": "metadata_as_csv_filename",
-                "type": "str"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_minio_endpoint",
-                "assignation": "conf_minio_endpoint<-\"scruffy.lab.uvalight.net:9000\""
-              },
-              {
-                "name": "conf_minio_public_bucket",
-                "assignation": "conf_minio_public_bucket<-\"naa-vre-public\""
-              },
-              {
-                "name": "conf_virtual_lab_biotisan_euromarec",
-                "assignation": "conf_virtual_lab_biotisan_euromarec<-\"vl-biotisan-euromarec\""
-              },
-              {
-                "name": "conf_minio_region",
-                "assignation": "conf_minio_region<-\"nl-uvalight\""
-              },
-              {
-                "name": "conf_temporary_data_directory",
-                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
-              },
-              {
-                "name": "conf_minio_user_bucket",
-                "assignation": "conf_minio_user_bucket<-\"naa-vre-user-data\""
-              }
-            ],
-            "params": [
-              {
-                "name": "param_data_filename",
-                "type": "str",
-                "default_value": "Template_MBO_Example_raw.xlsx"
-              },
-              {
-                "name": "param_data_sheet",
-                "type": "str",
-                "default_value": "BIRDS"
-              },
-              {
-                "name": "param_metadata_sheet",
-                "type": "str",
-                "default_value": "METADATA"
-              },
-              {
-                "name": "param_minio_user_prefix",
-                "type": "str",
-                "default_value": "koen.greuell@lifewatch.eu"
-              },
-              {
-                "name": "param_use_dummy_data",
-                "type": "int",
-                "default_value": null
-              }
-            ],
-            "secrets": [
-              {
-                "name": "secret_minio_access_key",
-                "type": "str"
-              },
-              {
-                "name": "secret_minio_secret_key",
-                "type": "str"
-              }
-            ],
-            "title": "minio-data-retrieverer-koen-greuell-lifewatch-eu",
-            "description": "minio-data-retrieverer-koen-greuell-lifewatch-eu",
-            "created": "2025-11-05T14:19:28.931763Z",
-            "modified": "2025-11-05T14:19:31.951181Z",
-            "version": 1,
-            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/minio-data-retrieverer-koen-greuell-lifewatch-eu:02248ff",
-            "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/7b8a98b9423debeb11f686b52e225cdd93c79f1b/minio-data-retrieverer-koen-greuell-lifewatch-eu",
             "next_version": null
           }
         },
@@ -589,31 +417,181 @@
           "width": 252,
           "height": 61
         }
+      },
+      "cb756a32-70bc-48a9-9611-582003b1837f": {
+        "id": "cb756a32-70bc-48a9-9611-582003b1837f",
+        "position": {
+          "x": 423.78446880139796,
+          "y": 80.31954887218042
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "data_as_csv_filename": {
+            "id": "data_as_csv_filename",
+            "type": "right",
+            "properties": {
+              "color": "#2d866b",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 17
+            }
+          },
+          "metadata_as_csv_filename": {
+            "id": "metadata_as_csv_filename",
+            "type": "right",
+            "properties": {
+              "color": "#79afd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 43
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/ebec7b1e-2e80-4519-8e42-46d58c7c9170/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "biotisan-euromarec",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.36",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.36"
+            },
+            "dependencies": [
+              {
+                "name": "SecretsProvider",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "aws.s3",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "readxl",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "dplyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "nlme",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "vegan",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "data_as_csv_filename",
+                "type": "str"
+              },
+              {
+                "name": "metadata_as_csv_filename",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_endpoint",
+                "assignation": "conf_minio_endpoint<-\"scruffy.lab.uvalight.net:9000\""
+              },
+              {
+                "name": "conf_minio_public_bucket",
+                "assignation": "conf_minio_public_bucket<-\"naa-vre-public\""
+              },
+              {
+                "name": "conf_virtual_lab_biotisan_euromarec",
+                "assignation": "conf_virtual_lab_biotisan_euromarec<-\"vl-biotisan-euromarec\""
+              },
+              {
+                "name": "conf_minio_region",
+                "assignation": "conf_minio_region<-\"nl-uvalight\""
+              },
+              {
+                "name": "conf_temporary_data_directory",
+                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
+              },
+              {
+                "name": "conf_minio_user_bucket",
+                "assignation": "conf_minio_user_bucket<-\"naa-vre-user-data\""
+              }
+            ],
+            "params": [
+              {
+                "name": "param_data_filename",
+                "type": "str",
+                "default_value": "Template_MBO_Example_raw.xlsx"
+              },
+              {
+                "name": "param_data_sheet",
+                "type": "str",
+                "default_value": "BIRDS"
+              },
+              {
+                "name": "param_metadata_sheet",
+                "type": "str",
+                "default_value": "METADATA"
+              },
+              {
+                "name": "param_minio_user_prefix",
+                "type": "str",
+                "default_value": "koen.greuell@lifewatch.eu"
+              },
+              {
+                "name": "param_use_dummy_data",
+                "type": "int",
+                "default_value": null
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "minio-data-retriever-koen-greuell-lifewatch-eu",
+            "description": "minio-data-retriever-koen-greuell-lifewatch-eu",
+            "created": "2025-11-06T12:37:25.434913Z",
+            "modified": "2025-11-06T12:37:26.301094Z",
+            "version": 1,
+            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/minio-data-retriever-koen-greuell-lifewatch-eu:02248ff",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/185028abd90c93edf005055f3e8ec434a74d82f0/minio-data-retriever-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
       }
     },
     "links": {
-      "dc4eb139-9be5-487b-beb5-df308dfe7582": {
-        "id": "dc4eb139-9be5-487b-beb5-df308dfe7582",
-        "from": {
-          "nodeId": "9b176509-f0c2-4743-9029-3e8662a10f57",
-          "portId": "data_as_csv_filename"
-        },
-        "to": {
-          "nodeId": "9cc96577-33d8-4f2f-bc56-0d53781799df",
-          "portId": "data_as_csv_filename"
-        }
-      },
-      "bfbe5822-2a89-457a-b7ce-89f206d71bfd": {
-        "id": "bfbe5822-2a89-457a-b7ce-89f206d71bfd",
-        "from": {
-          "nodeId": "9b176509-f0c2-4743-9029-3e8662a10f57",
-          "portId": "metadata_as_csv_filename"
-        },
-        "to": {
-          "nodeId": "9cc96577-33d8-4f2f-bc56-0d53781799df",
-          "portId": "metadata_as_csv_filename"
-        }
-      },
       "e49a3d77-fc7e-4798-a04b-a7399a93425e": {
         "id": "e49a3d77-fc7e-4798-a04b-a7399a93425e",
         "from": {
@@ -645,6 +623,28 @@
         "to": {
           "nodeId": "8f7464d9-6660-4a66-b491-50b6ce77a32c",
           "portId": "results_filename"
+        }
+      },
+      "170ea3be-96c5-4e30-8a35-b8dd47ac702e": {
+        "id": "170ea3be-96c5-4e30-8a35-b8dd47ac702e",
+        "from": {
+          "nodeId": "cb756a32-70bc-48a9-9611-582003b1837f",
+          "portId": "data_as_csv_filename"
+        },
+        "to": {
+          "nodeId": "9cc96577-33d8-4f2f-bc56-0d53781799df",
+          "portId": "data_as_csv_filename"
+        }
+      },
+      "4e5ef137-e02c-46cc-8c6f-3ab42a9a4f84": {
+        "id": "4e5ef137-e02c-46cc-8c6f-3ab42a9a4f84",
+        "from": {
+          "nodeId": "cb756a32-70bc-48a9-9611-582003b1837f",
+          "portId": "metadata_as_csv_filename"
+        },
+        "to": {
+          "nodeId": "9cc96577-33d8-4f2f-bc56-0d53781799df",
+          "portId": "metadata_as_csv_filename"
         }
       }
     },
