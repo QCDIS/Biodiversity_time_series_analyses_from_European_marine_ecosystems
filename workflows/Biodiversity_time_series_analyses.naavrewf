@@ -649,9 +649,6 @@
       }
     },
     "selected": {},
-    "hovered": {
-      "type": "node",
-      "id": "d7983995-e309-4913-95e3-092b884d4fc4"
-    }
+    "hovered": {}
   }
 }
