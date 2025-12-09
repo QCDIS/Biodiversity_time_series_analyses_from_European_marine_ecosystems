@@ -6,619 +6,6 @@
     },
     "scale": 0.852,
     "nodes": {
-      "d42d35b2-370e-4988-b7b3-b80f02f7dae5": {
-        "id": "d42d35b2-370e-4988-b7b3-b80f02f7dae5",
-        "position": {
-          "x": 1027.2362278244627,
-          "y": 304.4631185807655
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "plot_abundance_filename": {
-            "id": "plot_abundance_filename",
-            "type": "left",
-            "properties": {
-              "color": "#93691f",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 13
-            }
-          },
-          "plot_diversity_filename": {
-            "id": "plot_diversity_filename",
-            "type": "left",
-            "properties": {
-              "color": "#c8d279",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 39
-            }
-          },
-          "plot_richness_filename": {
-            "id": "plot_richness_filename",
-            "type": "left",
-            "properties": {
-              "color": "#40bf62",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 65
-            }
-          },
-          "results_filename": {
-            "id": "results_filename",
-            "type": "left",
-            "properties": {
-              "color": "#9279d2",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 91
-            }
-          },
-          "samples_ecological_parameters_filename": {
-            "id": "samples_ecological_parameters_filename",
-            "type": "left",
-            "properties": {
-              "color": "#409dbf",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 117
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/beb2968c-1972-495a-a108-d02927b0d3d8/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "biotisan-euromarec",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.44",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.44"
-            },
-            "dependencies": [
-              {
-                "name": "SecretsProvider",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "aws.s3",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "readxl",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "dplyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "tidyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "ggplot2",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "nlme",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "permute",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "vegan",
-                "module": "",
-                "asname": ""
-              }
-            ],
-            "inputs": [
-              {
-                "name": "plot_abundance_filename",
-                "type": "str"
-              },
-              {
-                "name": "plot_diversity_filename",
-                "type": "str"
-              },
-              {
-                "name": "plot_richness_filename",
-                "type": "str"
-              },
-              {
-                "name": "results_filename",
-                "type": "str"
-              },
-              {
-                "name": "samples_ecological_parameters_filename",
-                "type": "str"
-              }
-            ],
-            "outputs": [],
-            "confs": [
-              {
-                "name": "conf_minio_user_bucket",
-                "assignation": "conf_minio_user_bucket<-\"naa-vre-user-data\""
-              },
-              {
-                "name": "conf_minio_endpoint",
-                "assignation": "conf_minio_endpoint<-\"scruffy.lab.uvalight.net:9000\""
-              },
-              {
-                "name": "conf_minio_region",
-                "assignation": "conf_minio_region<-\"nl-uvalight\""
-              },
-              {
-                "name": "conf_temporary_data_directory",
-                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
-              }
-            ],
-            "params": [
-              {
-                "name": "param_make_plots",
-                "type": "int",
-                "default_value": null
-              },
-              {
-                "name": "param_output_samples_ecological_parameters",
-                "type": "int",
-                "default_value": null
-              },
-              {
-                "name": "param_user_name",
-                "type": "str",
-                "default_value": "koen.greuell@lifewatch.eu"
-              }
-            ],
-            "secrets": [
-              {
-                "name": "secret_minio_access_key",
-                "type": "str"
-              },
-              {
-                "name": "secret_minio_secret_key",
-                "type": "str"
-              }
-            ],
-            "title": "output-storer-koen-greuell-lifewatch-eu",
-            "description": "output-storer-koen-greuell-lifewatch-eu",
-            "created": "2025-12-09T09:12:51.228150Z",
-            "modified": "2025-12-09T09:12:52.078053Z",
-            "version": 8,
-            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/output-storer-koen-greuell-lifewatch-eu:64e6430",
-            "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/8db2f2dedc3f0299023f95c08536b17acc6e2875/output-storer-koen-greuell-lifewatch-eu",
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 131
-        }
-      },
-      "878670cb-0bb3-40ba-8841-2a8d92270a8e": {
-        "id": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-        "position": {
-          "x": 724.7152194211018,
-          "y": 282.9878618113911
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "cleaned_data_filename": {
-            "id": "cleaned_data_filename",
-            "type": "left",
-            "properties": {
-              "color": "#93211f",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 52
-            }
-          },
-          "cleaned_metadata_filename": {
-            "id": "cleaned_metadata_filename",
-            "type": "left",
-            "properties": {
-              "color": "#551f93",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": -2,
-              "y": 78
-            }
-          },
-          "plot_abundance_filename": {
-            "id": "plot_abundance_filename",
-            "type": "right",
-            "properties": {
-              "color": "#93691f",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 13
-            }
-          },
-          "plot_diversity_filename": {
-            "id": "plot_diversity_filename",
-            "type": "right",
-            "properties": {
-              "color": "#c8d279",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 39
-            }
-          },
-          "plot_richness_filename": {
-            "id": "plot_richness_filename",
-            "type": "right",
-            "properties": {
-              "color": "#40bf62",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 65
-            }
-          },
-          "results_filename": {
-            "id": "results_filename",
-            "type": "right",
-            "properties": {
-              "color": "#9279d2",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 91
-            }
-          },
-          "samples_ecological_parameters_filename": {
-            "id": "samples_ecological_parameters_filename",
-            "type": "right",
-            "properties": {
-              "color": "#409dbf",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 117
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/ed5cf63e-b3f7-4536-a3c1-2a674f14bf96/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "biotisan-euromarec",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.44",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.44"
-            },
-            "dependencies": [
-              {
-                "name": "dplyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "tidyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "ggplot2",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "nlme",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "permute",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "vegan",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "SecretsProvider",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "aws.s3",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "readxl",
-                "module": "",
-                "asname": ""
-              }
-            ],
-            "inputs": [
-              {
-                "name": "cleaned_data_filename",
-                "type": "str"
-              },
-              {
-                "name": "cleaned_metadata_filename",
-                "type": "str"
-              }
-            ],
-            "outputs": [
-              {
-                "name": "plot_abundance_filename",
-                "type": "str"
-              },
-              {
-                "name": "plot_diversity_filename",
-                "type": "str"
-              },
-              {
-                "name": "plot_richness_filename",
-                "type": "str"
-              },
-              {
-                "name": "results_filename",
-                "type": "str"
-              },
-              {
-                "name": "samples_ecological_parameters_filename",
-                "type": "str"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_temporary_data_directory",
-                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
-              }
-            ],
-            "params": [
-              {
-                "name": "param_data_filename",
-                "type": "str",
-                "default_value": "Template_MBO_Example_raw.xlsx"
-              },
-              {
-                "name": "param_transform_to_log10",
-                "type": "int",
-                "default_value": null
-              }
-            ],
-            "secrets": [],
-            "title": "trend-analyzer-koen-greuell-lifewatch-eu",
-            "description": "trend-analyzer-koen-greuell-lifewatch-eu",
-            "created": "2025-12-09T09:13:40.831856Z",
-            "modified": "2025-12-09T09:13:41.317990Z",
-            "version": 11,
-            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/trend-analyzer-koen-greuell-lifewatch-eu:9deecca",
-            "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/7ac45bd3f232d00571d3cfce204b34a0074badfe/trend-analyzer-koen-greuell-lifewatch-eu",
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 131
-        }
-      },
-      "2ecb4ab0-d069-4267-a3e3-26afc64a808d": {
-        "id": "2ecb4ab0-d069-4267-a3e3-26afc64a808d",
-        "position": {
-          "x": 110.33613445378151,
-          "y": 227.8991596638655
-        },
-        "orientation": 0,
-        "type": "workflow-cell",
-        "ports": {
-          "data_as_csv_filename": {
-            "id": "data_as_csv_filename",
-            "type": "right",
-            "properties": {
-              "color": "#2d866b",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 17
-            }
-          },
-          "metadata_as_csv_filename": {
-            "id": "metadata_as_csv_filename",
-            "type": "right",
-            "properties": {
-              "color": "#79afd2",
-              "parentNodeType": "workflow-cell"
-            },
-            "position": {
-              "x": 252,
-              "y": 43
-            }
-          }
-        },
-        "properties": {
-          "cell": {
-            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/dac02546-e9c5-44c9-b310-b50b3ef0e8ac/",
-            "owner": "koen.greuell@lifewatch.eu",
-            "virtual_lab": "biotisan-euromarec",
-            "shared_with_scopes": [],
-            "shared_with_users": [],
-            "base_container_image": {
-              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.44",
-              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.44"
-            },
-            "dependencies": [
-              {
-                "name": "SecretsProvider",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "aws.s3",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "readxl",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "dplyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "tidyr",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "ggplot2",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "nlme",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "permute",
-                "module": "",
-                "asname": ""
-              },
-              {
-                "name": "vegan",
-                "module": "",
-                "asname": ""
-              }
-            ],
-            "inputs": [],
-            "outputs": [
-              {
-                "name": "data_as_csv_filename",
-                "type": "str"
-              },
-              {
-                "name": "metadata_as_csv_filename",
-                "type": "str"
-              }
-            ],
-            "confs": [
-              {
-                "name": "conf_minio_user_bucket",
-                "assignation": "conf_minio_user_bucket<-\"naa-vre-user-data\""
-              },
-              {
-                "name": "conf_minio_endpoint",
-                "assignation": "conf_minio_endpoint<-\"scruffy.lab.uvalight.net:9000\""
-              },
-              {
-                "name": "conf_virtual_lab_biotisan_euromarec",
-                "assignation": "conf_virtual_lab_biotisan_euromarec<-\"vl-biotisan-euromarec\""
-              },
-              {
-                "name": "conf_minio_public_bucket",
-                "assignation": "conf_minio_public_bucket<-\"naa-vre-public\""
-              },
-              {
-                "name": "conf_minio_region",
-                "assignation": "conf_minio_region<-\"nl-uvalight\""
-              },
-              {
-                "name": "conf_temporary_data_directory",
-                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
-              }
-            ],
-            "params": [
-              {
-                "name": "param_data_filename",
-                "type": "str",
-                "default_value": "Template_MBO_Example_raw.xlsx"
-              },
-              {
-                "name": "param_data_sheet",
-                "type": "str",
-                "default_value": "BIRDS"
-              },
-              {
-                "name": "param_metadata_sheet",
-                "type": "str",
-                "default_value": "METADATA"
-              },
-              {
-                "name": "param_use_dummy_data",
-                "type": "int",
-                "default_value": null
-              },
-              {
-                "name": "param_user_name",
-                "type": "str",
-                "default_value": "koen.greuell@lifewatch.eu"
-              }
-            ],
-            "secrets": [
-              {
-                "name": "secret_minio_access_key",
-                "type": "str"
-              },
-              {
-                "name": "secret_minio_secret_key",
-                "type": "str"
-              }
-            ],
-            "title": "minio-data-retriever-koen-greuell-lifewatch-eu",
-            "description": "minio-data-retriever-koen-greuell-lifewatch-eu",
-            "created": "2025-12-09T09:13:21.422948Z",
-            "modified": "2025-12-09T09:13:22.430448Z",
-            "version": 11,
-            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/minio-data-retriever-koen-greuell-lifewatch-eu:e3908d7",
-            "kernel": "IRkernel",
-            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/c1fde948ed0cbde38f9cb1ad22b82833f11dbe4c/minio-data-retriever-koen-greuell-lifewatch-eu",
-            "next_version": null
-          }
-        },
-        "size": {
-          "width": 252,
-          "height": 61
-        }
-      },
       "15255f67-db9c-4ae6-bd29-bd095cde9f43": {
         "id": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
         "position": {
@@ -1039,108 +426,622 @@
           "width": 252,
           "height": 61
         }
+      },
+      "7c037f85-1442-4237-9553-123447580dea": {
+        "id": "7c037f85-1442-4237-9553-123447580dea",
+        "position": {
+          "x": 1049.3544600938967,
+          "y": 292.6760563380284
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "plot_abundance_filename": {
+            "id": "plot_abundance_filename",
+            "type": "left",
+            "properties": {
+              "color": "#93691f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 13
+            }
+          },
+          "plot_diversity_filename": {
+            "id": "plot_diversity_filename",
+            "type": "left",
+            "properties": {
+              "color": "#c8d279",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 39
+            }
+          },
+          "plot_richness_filename": {
+            "id": "plot_richness_filename",
+            "type": "left",
+            "properties": {
+              "color": "#40bf62",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 65
+            }
+          },
+          "results_filename": {
+            "id": "results_filename",
+            "type": "left",
+            "properties": {
+              "color": "#9279d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 91
+            }
+          },
+          "samples_ecological_parameters_filename": {
+            "id": "samples_ecological_parameters_filename",
+            "type": "left",
+            "properties": {
+              "color": "#409dbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 117
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/74f49193-9345-461e-b543-89d6d3b06071/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "biotisan-euromarec",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.44",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.44"
+            },
+            "dependencies": [
+              {
+                "name": "tidyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "nlme",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "permute",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "vegan",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "SecretsProvider",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "aws.s3",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "readxl",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "dplyr",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [
+              {
+                "name": "plot_abundance_filename",
+                "type": "str"
+              },
+              {
+                "name": "plot_diversity_filename",
+                "type": "str"
+              },
+              {
+                "name": "plot_richness_filename",
+                "type": "str"
+              },
+              {
+                "name": "results_filename",
+                "type": "str"
+              },
+              {
+                "name": "samples_ecological_parameters_filename",
+                "type": "str"
+              }
+            ],
+            "outputs": [],
+            "confs": [
+              {
+                "name": "conf_minio_user_bucket",
+                "assignation": "conf_minio_user_bucket<-\"naa-vre-user-data\""
+              },
+              {
+                "name": "conf_minio_endpoint",
+                "assignation": "conf_minio_endpoint<-\"scruffy.lab.uvalight.net:9000\""
+              },
+              {
+                "name": "conf_minio_region",
+                "assignation": "conf_minio_region<-\"nl-uvalight\""
+              },
+              {
+                "name": "conf_temporary_data_directory",
+                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
+              }
+            ],
+            "params": [
+              {
+                "name": "param_output_samples_ecological_parameters",
+                "type": "str",
+                "default_value": "false"
+              },
+              {
+                "name": "param_user_name",
+                "type": "str",
+                "default_value": "See URL: beta.naavre.net/jupyter/user/[param_user_name]/lab"
+              },
+              {
+                "name": "param_make_plots",
+                "type": "str",
+                "default_value": "true"
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "output-storer-koen-greuell-lifewatch-eu",
+            "description": "output-storer-koen-greuell-lifewatch-eu",
+            "created": "2025-12-09T10:59:39.834585Z",
+            "modified": "2025-12-09T10:59:40.299204Z",
+            "version": 9,
+            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/output-storer-koen-greuell-lifewatch-eu:cee365b",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/15f34d5734e93091d177b18316b3deb907258086/output-storer-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 131
+        }
+      },
+      "ff236497-96da-418c-be9b-5999870ef0af": {
+        "id": "ff236497-96da-418c-be9b-5999870ef0af",
+        "position": {
+          "x": 730.1056338028168,
+          "y": 273.89671361502343
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "cleaned_data_filename": {
+            "id": "cleaned_data_filename",
+            "type": "left",
+            "properties": {
+              "color": "#93211f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 52
+            }
+          },
+          "cleaned_metadata_filename": {
+            "id": "cleaned_metadata_filename",
+            "type": "left",
+            "properties": {
+              "color": "#551f93",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 78
+            }
+          },
+          "plot_abundance_filename": {
+            "id": "plot_abundance_filename",
+            "type": "right",
+            "properties": {
+              "color": "#93691f",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 13
+            }
+          },
+          "plot_diversity_filename": {
+            "id": "plot_diversity_filename",
+            "type": "right",
+            "properties": {
+              "color": "#c8d279",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 39
+            }
+          },
+          "plot_richness_filename": {
+            "id": "plot_richness_filename",
+            "type": "right",
+            "properties": {
+              "color": "#40bf62",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 65
+            }
+          },
+          "results_filename": {
+            "id": "results_filename",
+            "type": "right",
+            "properties": {
+              "color": "#9279d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 91
+            }
+          },
+          "samples_ecological_parameters_filename": {
+            "id": "samples_ecological_parameters_filename",
+            "type": "right",
+            "properties": {
+              "color": "#409dbf",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 117
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/3f185c44-22b4-4dd6-b7fd-01dd66f15d5c/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "biotisan-euromarec",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.44",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.44"
+            },
+            "dependencies": [
+              {
+                "name": "SecretsProvider",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "aws.s3",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "readxl",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "dplyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "tidyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "nlme",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "permute",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "vegan",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [
+              {
+                "name": "cleaned_data_filename",
+                "type": "str"
+              },
+              {
+                "name": "cleaned_metadata_filename",
+                "type": "str"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "plot_abundance_filename",
+                "type": "str"
+              },
+              {
+                "name": "plot_diversity_filename",
+                "type": "str"
+              },
+              {
+                "name": "plot_richness_filename",
+                "type": "str"
+              },
+              {
+                "name": "results_filename",
+                "type": "str"
+              },
+              {
+                "name": "samples_ecological_parameters_filename",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_temporary_data_directory",
+                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
+              }
+            ],
+            "params": [
+              {
+                "name": "param_data_filename",
+                "type": "str",
+                "default_value": "Template_MBO_Example_raw.xlsx"
+              },
+              {
+                "name": "param_transform_to_log10",
+                "type": "str",
+                "default_value": "true"
+              }
+            ],
+            "secrets": [],
+            "title": "trend-analyzer-koen-greuell-lifewatch-eu",
+            "description": "trend-analyzer-koen-greuell-lifewatch-eu",
+            "created": "2025-12-09T10:59:26.813100Z",
+            "modified": "2025-12-09T10:59:27.216232Z",
+            "version": 11,
+            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/trend-analyzer-koen-greuell-lifewatch-eu:037cdf6",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/687e108c8635af0e768c5923e6461fbb4e6afe0b/trend-analyzer-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 131
+        }
+      },
+      "6b996c2c-72f8-4461-afa1-9ce2a2f2b096": {
+        "id": "6b996c2c-72f8-4461-afa1-9ce2a2f2b096",
+        "position": {
+          "x": 93.95539906103289,
+          "y": 205.8215962441315
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "data_as_csv_filename": {
+            "id": "data_as_csv_filename",
+            "type": "right",
+            "properties": {
+              "color": "#2d866b",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 17
+            }
+          },
+          "metadata_as_csv_filename": {
+            "id": "metadata_as_csv_filename",
+            "type": "right",
+            "properties": {
+              "color": "#79afd2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 43
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/8e6836d2-f22d-4225-aabc-73ce59992eb8/",
+            "owner": "koen.greuell@lifewatch.eu",
+            "virtual_lab": "biotisan-euromarec",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-build:v0.0.44",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-biotisan-euromarec-cell-runtime:v0.0.44"
+            },
+            "dependencies": [
+              {
+                "name": "SecretsProvider",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "aws.s3",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "readxl",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "dplyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "tidyr",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "nlme",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "permute",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "vegan",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "data_as_csv_filename",
+                "type": "str"
+              },
+              {
+                "name": "metadata_as_csv_filename",
+                "type": "str"
+              }
+            ],
+            "confs": [
+              {
+                "name": "conf_minio_user_bucket",
+                "assignation": "conf_minio_user_bucket<-\"naa-vre-user-data\""
+              },
+              {
+                "name": "conf_minio_endpoint",
+                "assignation": "conf_minio_endpoint<-\"scruffy.lab.uvalight.net:9000\""
+              },
+              {
+                "name": "conf_virtual_lab_biotisan_euromarec",
+                "assignation": "conf_virtual_lab_biotisan_euromarec<-\"vl-biotisan-euromarec\""
+              },
+              {
+                "name": "conf_minio_public_bucket",
+                "assignation": "conf_minio_public_bucket<-\"naa-vre-public\""
+              },
+              {
+                "name": "conf_minio_region",
+                "assignation": "conf_minio_region<-\"nl-uvalight\""
+              },
+              {
+                "name": "conf_temporary_data_directory",
+                "assignation": "conf_temporary_data_directory<-\"/tmp/data\""
+              }
+            ],
+            "params": [
+              {
+                "name": "param_data_filename",
+                "type": "str",
+                "default_value": "Template_MBO_Example_raw.xlsx"
+              },
+              {
+                "name": "param_data_sheet",
+                "type": "str",
+                "default_value": "BIRDS"
+              },
+              {
+                "name": "param_metadata_sheet",
+                "type": "str",
+                "default_value": "METADATA"
+              },
+              {
+                "name": "param_use_dummy_data",
+                "type": "str",
+                "default_value": "true"
+              },
+              {
+                "name": "param_user_name",
+                "type": "str",
+                "default_value": "See URL: beta.naavre.net/jupyter/user/[param_user_name]/lab"
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_minio_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_minio_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "minio-data-retriever-koen-greuell-lifewatch-eu",
+            "description": "minio-data-retriever-koen-greuell-lifewatch-eu",
+            "created": "2025-12-09T10:58:30.610740Z",
+            "modified": "2025-12-09T10:58:31.160366Z",
+            "version": 11,
+            "container_image": "ghcr.io/naavre/cells-vl-biotisan-euromarec/minio-data-retriever-koen-greuell-lifewatch-eu:83e7ea9",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-biotisan-euromarec/tree/5dea6ed7744d9a6a48124867b8814acafa5d9c97/minio-data-retriever-koen-greuell-lifewatch-eu",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
       }
     },
     "links": {
-      "f154185f-96ec-4bab-a966-8b8544006c82": {
-        "id": "f154185f-96ec-4bab-a966-8b8544006c82",
-        "from": {
-          "nodeId": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-          "portId": "plot_abundance_filename"
-        },
-        "to": {
-          "nodeId": "d42d35b2-370e-4988-b7b3-b80f02f7dae5",
-          "portId": "plot_abundance_filename"
-        }
-      },
-      "bc13a531-eb26-48aa-aa81-c57c7cd6639b": {
-        "id": "bc13a531-eb26-48aa-aa81-c57c7cd6639b",
-        "from": {
-          "nodeId": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-          "portId": "plot_diversity_filename"
-        },
-        "to": {
-          "nodeId": "d42d35b2-370e-4988-b7b3-b80f02f7dae5",
-          "portId": "plot_diversity_filename"
-        }
-      },
-      "c99a65a5-a0ad-4500-bcca-a0448183e151": {
-        "id": "c99a65a5-a0ad-4500-bcca-a0448183e151",
-        "from": {
-          "nodeId": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-          "portId": "plot_richness_filename"
-        },
-        "to": {
-          "nodeId": "d42d35b2-370e-4988-b7b3-b80f02f7dae5",
-          "portId": "plot_richness_filename"
-        }
-      },
-      "f02a6fd4-fa90-4ba1-924b-f6a1a9efb8cf": {
-        "id": "f02a6fd4-fa90-4ba1-924b-f6a1a9efb8cf",
-        "from": {
-          "nodeId": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-          "portId": "results_filename"
-        },
-        "to": {
-          "nodeId": "d42d35b2-370e-4988-b7b3-b80f02f7dae5",
-          "portId": "results_filename"
-        }
-      },
-      "9c1d484e-66c5-4e2e-ac0d-9faeace857fa": {
-        "id": "9c1d484e-66c5-4e2e-ac0d-9faeace857fa",
-        "from": {
-          "nodeId": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-          "portId": "samples_ecological_parameters_filename"
-        },
-        "to": {
-          "nodeId": "d42d35b2-370e-4988-b7b3-b80f02f7dae5",
-          "portId": "samples_ecological_parameters_filename"
-        }
-      },
-      "530998e4-b1b0-4e6c-b30f-d8496531cabf": {
-        "id": "530998e4-b1b0-4e6c-b30f-d8496531cabf",
-        "from": {
-          "nodeId": "2ecb4ab0-d069-4267-a3e3-26afc64a808d",
-          "portId": "data_as_csv_filename"
-        },
-        "to": {
-          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
-          "portId": "data_as_csv_filename"
-        }
-      },
-      "602116d7-37a0-4536-9440-58f5165177ca": {
-        "id": "602116d7-37a0-4536-9440-58f5165177ca",
-        "from": {
-          "nodeId": "2ecb4ab0-d069-4267-a3e3-26afc64a808d",
-          "portId": "metadata_as_csv_filename"
-        },
-        "to": {
-          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
-          "portId": "metadata_as_csv_filename"
-        }
-      },
-      "451f239d-5fca-4ba0-aae0-90d140c37d07": {
-        "id": "451f239d-5fca-4ba0-aae0-90d140c37d07",
-        "from": {
-          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
-          "portId": "cleaned_data_filename"
-        },
-        "to": {
-          "nodeId": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-          "portId": "cleaned_data_filename"
-        }
-      },
-      "f203ace6-69a4-4412-a52b-9139b3fcf933": {
-        "id": "f203ace6-69a4-4412-a52b-9139b3fcf933",
-        "from": {
-          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
-          "portId": "cleaned_metadata_filename"
-        },
-        "to": {
-          "nodeId": "878670cb-0bb3-40ba-8841-2a8d92270a8e",
-          "portId": "cleaned_metadata_filename"
-        }
-      },
       "8f397f98-a281-4093-8dfd-47e62ae87d5b": {
         "id": "8f397f98-a281-4093-8dfd-47e62ae87d5b",
         "from": {
@@ -1150,6 +1051,105 @@
         "to": {
           "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
           "portId": "number_of_validation_errors"
+        }
+      },
+      "c1a7b990-9af5-4652-8981-e4bb0dfc54f1": {
+        "id": "c1a7b990-9af5-4652-8981-e4bb0dfc54f1",
+        "from": {
+          "nodeId": "6b996c2c-72f8-4461-afa1-9ce2a2f2b096",
+          "portId": "data_as_csv_filename"
+        },
+        "to": {
+          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
+          "portId": "data_as_csv_filename"
+        }
+      },
+      "95c2d097-da31-4a74-9e85-d5dd05b6cb87": {
+        "id": "95c2d097-da31-4a74-9e85-d5dd05b6cb87",
+        "from": {
+          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
+          "portId": "cleaned_data_filename"
+        },
+        "to": {
+          "nodeId": "ff236497-96da-418c-be9b-5999870ef0af",
+          "portId": "cleaned_data_filename"
+        }
+      },
+      "02bb6be9-41d2-4b39-b1e5-8e61fbbcad7b": {
+        "id": "02bb6be9-41d2-4b39-b1e5-8e61fbbcad7b",
+        "from": {
+          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
+          "portId": "cleaned_metadata_filename"
+        },
+        "to": {
+          "nodeId": "ff236497-96da-418c-be9b-5999870ef0af",
+          "portId": "cleaned_metadata_filename"
+        }
+      },
+      "44b1aae2-04e2-4941-a127-9229e993b20a": {
+        "id": "44b1aae2-04e2-4941-a127-9229e993b20a",
+        "from": {
+          "nodeId": "ff236497-96da-418c-be9b-5999870ef0af",
+          "portId": "plot_abundance_filename"
+        },
+        "to": {
+          "nodeId": "7c037f85-1442-4237-9553-123447580dea",
+          "portId": "plot_abundance_filename"
+        }
+      },
+      "35db82a9-1e49-424a-aca3-2a72345a60f8": {
+        "id": "35db82a9-1e49-424a-aca3-2a72345a60f8",
+        "from": {
+          "nodeId": "ff236497-96da-418c-be9b-5999870ef0af",
+          "portId": "plot_diversity_filename"
+        },
+        "to": {
+          "nodeId": "7c037f85-1442-4237-9553-123447580dea",
+          "portId": "plot_diversity_filename"
+        }
+      },
+      "9dc52c84-a560-4900-9a3d-6ebbb4dce3c4": {
+        "id": "9dc52c84-a560-4900-9a3d-6ebbb4dce3c4",
+        "from": {
+          "nodeId": "ff236497-96da-418c-be9b-5999870ef0af",
+          "portId": "plot_richness_filename"
+        },
+        "to": {
+          "nodeId": "7c037f85-1442-4237-9553-123447580dea",
+          "portId": "plot_richness_filename"
+        }
+      },
+      "aa26ea01-1a2d-48b2-81dc-e35bc53ff92b": {
+        "id": "aa26ea01-1a2d-48b2-81dc-e35bc53ff92b",
+        "from": {
+          "nodeId": "ff236497-96da-418c-be9b-5999870ef0af",
+          "portId": "results_filename"
+        },
+        "to": {
+          "nodeId": "7c037f85-1442-4237-9553-123447580dea",
+          "portId": "results_filename"
+        }
+      },
+      "c2bbcb2a-de54-4a82-a185-762f769df129": {
+        "id": "c2bbcb2a-de54-4a82-a185-762f769df129",
+        "from": {
+          "nodeId": "ff236497-96da-418c-be9b-5999870ef0af",
+          "portId": "samples_ecological_parameters_filename"
+        },
+        "to": {
+          "nodeId": "7c037f85-1442-4237-9553-123447580dea",
+          "portId": "samples_ecological_parameters_filename"
+        }
+      },
+      "6fe4655f-e9fc-450a-889e-451816fe6e34": {
+        "id": "6fe4655f-e9fc-450a-889e-451816fe6e34",
+        "from": {
+          "nodeId": "6b996c2c-72f8-4461-afa1-9ce2a2f2b096",
+          "portId": "metadata_as_csv_filename"
+        },
+        "to": {
+          "nodeId": "15255f67-db9c-4ae6-bd29-bd095cde9f43",
+          "portId": "metadata_as_csv_filename"
         }
       }
     },
