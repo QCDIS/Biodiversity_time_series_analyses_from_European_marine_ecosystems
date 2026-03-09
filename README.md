@@ -1,4 +1,7 @@
 # Biodiversity time series analyses from European marine ecosystems
+
+<img src="documentation/images/hero-light.svg" align="right" width="300">
+
 MarcoBolo WF3 T5.1.1
 
 ![documentation/images/biotisan_euromarec_flowchart.png](documentation/images/biotisan_euromarec_flowchart.png)
