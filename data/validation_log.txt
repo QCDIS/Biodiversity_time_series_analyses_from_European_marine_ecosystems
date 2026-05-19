@@ -1,0 +1,8 @@
+
+ param_09_years (value: 99999) is not: numeric and between 0 and 1000.
+ param_10_upper_limit_max_depth (value: 999999) is not: numeric and between -10000 and 10000.
+ param_11_lower_limit_max_depth (value: 999999) is not: numeric and between -10000 and 10000.
+ param_12_upper_limit_min_depth (value: 999999) is not: numeric and between -10000 and 10000.
+ param_13_lower_limit_min_depth (value: 999999) is not: numeric and between -10000 and 10000.
+ param_07_first_month (value: 99999) is not: numeric and between 1 and 12.
+ param_08_last_month (value: 99999) is not: numeric and between 1 and 12.
